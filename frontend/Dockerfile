@@ -5,3 +5,4 @@ COPY login.html /usr/share/nginx/html/
 COPY register.html /usr/share/nginx/html/
 COPY style.css /usr/share/nginx/html/
 COPY script.js /usr/share/nginx/html/
+COPY logo.png /usr/share/nginx/html/
