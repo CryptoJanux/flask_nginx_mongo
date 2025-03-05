@@ -15,8 +15,8 @@ jobs:
 
       - name: Stop and Remove Existing Containers
         run: |
-          docker-compose down
+          sudo docker-compose down
 
       - name: Build and Start Docker Containers
         run: |
-          docker-compose up --build -d
+          sudo docker-compose up --build -d
