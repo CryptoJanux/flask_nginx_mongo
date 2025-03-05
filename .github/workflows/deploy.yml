@@ -1,0 +1,22 @@
+name: Deploy Flask + Nginx + MongoDB
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted  # Use your self-hosted runner
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Stop and Remove Existing Containers
+        run: |
+          docker-compose down
+
+      - name: Build and Start Docker Containers
+        run: |
+          docker-compose up --build -d
